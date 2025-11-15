@@ -53,16 +53,4 @@ python print_grid.py <google-doc-url> > grid.txt
 - **No coordinate data found:** Ensure the Google Doc is exported as plain text (`export?format=txt`) and is publicly readable. The script attempts to use the Google Docs export endpoint but requires the document to be accessible.
 - **Unicode / encoding issues:** If you see `UnicodeEncodeError` when printing block characters on Windows, change terminal encoding to UTF-8 (`chcp 65001`), use PowerShell, or redirect output to a file.
 
-**Files**
 
-- **Script:**: `print_grid.py`
-
-**Cleanup**
-
-- If you want to remove temporary artefacts created during testing, delete `grid.txt` and the `__pycache__/` directory. The repository has no external dependencies, so it is safe to remove a local `.venv/` if present.
-
-**Next steps**
-
-- Add an `--out` flag or `--encoding` option if you would like the script to always write a UTF-8 output file instead of printing to stdout.
-
-If you want, I can also: add a minimal `README` badge, add a short example Google Doc with coordinates, or add an `--out` CLI flag now.
